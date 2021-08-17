@@ -1,8 +1,9 @@
 module.exports = function reverse (n) {
   let result = 0;
-  while (n) {
-      result = result * 10 + n % 10;
-      n = Math.floor(n / 10);
+  let nAbs = Math.abs(n);
+  while (nAbs) {
+      result = result * 10 + nAbs % 10;
+      nAbs = Math.floor(nAbs / 10);
   };
   return result;
 };
